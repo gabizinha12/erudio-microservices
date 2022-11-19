@@ -66,6 +66,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-maven-plugin</artifactId>
+			<configuration>
+				<url>jdbc:mysql://localhost:3306/book_service?useTimezone=true&amp;serverTimezone=UTC&amp;</url>
+				<user>root</user>
+				<password>gabilimajk12U</password>
+			</configuration>
+		</plugin>
 		</plugins>
 	</build>
 

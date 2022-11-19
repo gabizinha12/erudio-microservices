@@ -5,7 +5,7 @@ spring:
     name: book-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cambio_service?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
     username: root
     password: gabilimajk12U
   jpa:
@@ -14,7 +14,7 @@ spring:
     show-sql: true
     properties:
      hibernate: 
-      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      dialect: org.hibernate.dialect.MySQL8Dialect
   flyway:
     url: jdbc:mysql://localhost:3306/
     schemas: book_service
@@ -22,6 +22,7 @@ spring:
     password: gabilimajk12U
     locations:
     - classpath:/db
+    ignore-ignored-migrations: true
     enabled: true
   jackson:
     serialization:

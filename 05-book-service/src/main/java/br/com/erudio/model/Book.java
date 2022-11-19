@@ -1,6 +1,7 @@
 package br.com.erudio.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public class Book implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date launchDate;
 	@Column(nullable = false)
-	private Double price;
+	private BigDecimal price;
 	@Column(nullable = false, length = 250)
 	private String title;
 	@Transient
@@ -42,7 +43,7 @@ public class Book implements Serializable {
 	public Book() {
 	}
 
-	public Book(Long id, String author, String title, Date launchDate, Double price, String currency, String environment) {
+	public Book(Long id, String author, String title, Date launchDate, BigDecimal price, String currency, String environment) {
 		super();
 		this.id = id;
 		this.author = author;
@@ -77,11 +78,11 @@ public class Book implements Serializable {
 		this.launchDate = launchDate;
 	}
 
-	public Double getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 
